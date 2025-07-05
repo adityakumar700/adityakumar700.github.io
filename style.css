@@ -1,0 +1,121 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --accent: #0077cc;
+  --card-bg: #fff;
+}
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --accent: #4ea8de;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: var(--accent);
+  margin: 10px 0;
+}
+
+.contact a {
+  color: var(--accent);
+  margin: 0 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin: 40px 0;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  animation: fadeUp 1s ease-out;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+.project a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-to-top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Theme toggle */
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
